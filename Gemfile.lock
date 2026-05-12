@@ -182,6 +182,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.19.3-arm-linux-musl)
       racc (~> 1.4)
+    nokogiri (1.19.3-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.19.3-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.19.3-x86_64-linux-gnu)
@@ -314,6 +316,7 @@ GEM
     sqlite3 (2.9.4-aarch64-linux-musl)
     sqlite3 (2.9.4-arm-linux-gnu)
     sqlite3 (2.9.4-arm-linux-musl)
+    sqlite3 (2.9.4-arm64-darwin)
     sqlite3 (2.9.4-x86_64-darwin)
     sqlite3 (2.9.4-x86_64-linux-gnu)
     sqlite3 (2.9.4-x86_64-linux-musl)
@@ -330,6 +333,7 @@ GEM
     thor (1.5.0)
     thruster (0.1.20)
     thruster (0.1.20-aarch64-linux)
+    thruster (0.1.20-arm64-darwin)
     thruster (0.1.20-x86_64-darwin)
     thruster (0.1.20-x86_64-linux)
     timeout (0.6.1)
@@ -363,6 +367,7 @@ PLATFORMS
   aarch64-linux-musl
   arm-linux-gnu
   arm-linux-musl
+  arm64-darwin-24
   x86_64-darwin-24
   x86_64-linux
   x86_64-linux-gnu

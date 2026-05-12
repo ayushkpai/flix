@@ -8,3 +8,346 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+:root {
+  --black: #393939;
+  --off-white: #ededed;
+  --dark-gray: #666;
+  --medium-gray: #6c757d;
+  --light-gray: #c2c2c2;
+  --blue: #237cbe;
+  --light-blue: #c1def2;
+  --orange: #e8890c;
+  --yellow: #ffc107;
+  --light-yellow: #ffffcc;
+  --red: #dc3545;
+
+  --secondary-text-color: var(--medium-gray);
+  --accent-color: var(--orange);
+  --secondary-link-color: var(--light-blue);
+  --border-color: var(--light-gray);
+  --error-color: var(--red);
+  --error-background-color: var(--light-yellow);
+  --sold-out-color: var(--yellow);
+
+  --box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.09);
+}
+
+body {
+  color: var(--black);
+  background: var(--off-white);
+}
+
+.content {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: var(--blue);
+  padding: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+header nav img {
+  height: 50px;
+  margin-right: 0.5rem;
+}
+
+header nav a {
+  color: var(--secondary-link-color);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+header nav li {
+  font-size: 1.1rem;
+}
+
+header nav li a {
+  padding-bottom: 1px;
+}
+
+header nav li a:hover,
+header nav li a.active {
+  color: var(--off-white);
+  text-decoration: none;
+  border-bottom: 1px solid var(--off-white);
+}
+
+section.movie {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1em;
+  border-bottom: 1px dotted var(--border-color);
+}
+
+section.movie:last-child {
+  border-bottom: none;
+}
+
+section.movie .image img {
+  width: 100px;
+  box-shadow: var(--box-shadow);
+}
+
+section.movie h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+section.movie h3 {
+  font-size: 1.1rem;
+  color: var(--secondary-text-color);
+  font-weight: 400;
+}
+
+section.movie p {
+  margin-top: 1.1rem;
+}
+
+section.movie span.stars {
+  float: right;
+  margin-top: -3.75rem;
+}
+
+section.movie-details {
+  display: flex;
+  gap: 2rem;
+}
+
+section.movie-details h1 {
+  font-size: 2rem;
+}
+
+section.movie-details h2 {
+  font-size: 1.35rem;
+  color: var(--secondary-text-color);
+}
+
+section.movie-details h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  color: var(--secondary-text-color);
+  font-weight: 300;
+}
+
+section.movie-details table td {
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+section.movie-details table th {
+  padding-right: 1rem;
+}
+
+section.movie-details p {
+  margin-top: 1rem;
+  font-size: 1.15em;
+}
+
+section.movie-details .image img {
+  margin-top: 0.5rem;
+  width: 150px;
+  box-shadow: var(--box-shadow);
+}
+
+ul.users,
+ul.reviews {
+  font-size: 1.25em;
+  list-style: none;
+  padding: 0;
+}
+
+ul.users li,
+ul.reviews li {
+  margin: 1em 0;
+}
+
+section.user h2 {
+  font-size: 1.35rem;
+  color: var(--secondary-text-color);
+}
+
+section.user h3 {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+section.user .review {
+  margin: 1rem 0;
+  border-radius: 0.3rem;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+}
+
+section.user .review .title {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+section.user .review .date {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+}
+
+section.user .favorite-movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -1rem;
+}
+
+section.user .favorite-movies img {
+  margin: 1rem;
+  width: 150px;
+  box-shadow: var(--box-shadow);
+}
+
+footer {
+  background: var(--black);
+  color: var(--light-gray);
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem 0;
+}
+
+section.admin {
+  text-align: center;
+  margin: 3rem 0;
+  padding-top: 2rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+section.admin.no-rule {
+  border-top: none;
+  padding-top: 0;
+}
+
+aside h4 {
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding-bottom: 0.3rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-color);
+}
+
+aside ul {
+  list-style: none;
+  padding-left: 0.25rem;
+}
+
+aside ul li {
+  padding-bottom: 0.5rem;
+}
+
+form.button_to {
+  display: inline;
+}
+
+form:not(.button_to) {
+  max-width: 503px;
+  margin-top: 1.5rem;
+}
+
+form label,
+form .legend {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: block;
+}
+
+form input,
+form textarea,
+form select {
+  margin-bottom: 0.75rem;
+  width: 100%;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+form input[type="submit"] {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.flash {
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.flash.notice {
+  background: #d1e7dd;
+  color: #0f5132;
+}
+
+.flash.alert {
+  background: #f8d7da;
+  color: #842029;
+}
+
+section.errors {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  background: var(--error-background-color);
+}
+
+section.errors h2 {
+  color: var(--error-color);
+  font-size: 1.25rem;
+}
+
+section.errors h3 {
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  height: 25px;
+  justify-content: left;
+}
+
+.star-rating .back-stars {
+  display: flex;
+  color: var(--light-gray);
+  position: relative;
+}
+
+.star-rating .front-stars {
+  display: flex;
+  color: var(--accent-color);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
