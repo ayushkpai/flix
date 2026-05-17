@@ -12,4 +12,8 @@
   </div>
 </section>
 
-<section class="admin"><%= link_to "Edit", edit_movie_path(@movie), class: "btn btn-outline-secondary" %></section>
+<section class="admin">
+  <%= link_to "Edit", edit_movie_path(@movie), class: "btn btn-secondary" %>
+  <%= link_to "Delete", movie_path(@movie), class: "btn btn-outline-secondary",
+    data: { turbo_method: :delete, turbo_confirm: "Are you sure" } %>
+</section>
