@@ -26,7 +26,10 @@
 
   <body>
     <%= render "layouts/header" %>
-    <div class="content"><%= yield %></div>
+    <div class="content">
+      <%= render "layouts/flash" %>
+      <%= yield %>
+    </div>
     <%= render "layouts/footer" %>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
