@@ -1,14 +1,25 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
   <div class="container-fluid">
     <%= link_to image_tag("logo.png"), root_path %>
+
     <button
       class="navbar-toggler"
-      type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarsExample02">
-      <ul class="navbar-nav me-auto"><li class="nav-item"><%= link_to "Movies", movies_path %></li></ul>
-      <%= link_to "Sign up", signup_path, class: "btn btn-outline-light" %>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav w-100">
+        <li class="nav-item p-1"><%= link_to "Movies", movies_path, class: "nav-link" %></li>
+        <li class="nav-item p-1"><%= link_to "Users", users_path, class: "nav-link" %></li>
+        <li class="nav-item p-1 ms-auto"><%= link_to "Add", new_movie_path, class: "btn btn-primary" %></li>
+        <li class="nav-item p-1"><%= link_to "Sign up", signup_path, class: "btn btn-outline-light" %></li>
+      </ul>
     </div>
   </div>
 </nav>
