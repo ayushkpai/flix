@@ -19,7 +19,10 @@
       </tr>
     </table>
       <%= link_to "Write Review", new_movie_review_path(@movie), class: "btn btn-success" %>
-    <div class="reviews"><%= link_to "Reviews", movie_reviews_path(@movie) %></div>
+    <div class="reviews">
+      <%= average_stars(@movie) %>
+      <%= link_to "Reviews", movie_reviews_path(@movie) %>
+    </div>
   </div>
 </section>
 
