@@ -8,10 +8,9 @@
     <%= f.text_area :description, rows: 10 %>
     
     <%= f.label :rating %>
-    <%= f.text_field :rating %><%= f.select :rating, Movie::RATINGS, prompt: "Select" %>
+    <%= f.select :rating, Movie::RATINGS, prompt: "Select" %>
 
     <%= f.label :released_on %>
-    <div class="d-flex align-items-center gap-2"><%= f.date_select :released_on, {}, {class: "date"} %></div>
     <%= f.date_field :released_on %>
 
     <%= f.label :total_gross %>

@@ -1,6 +1,14 @@
-<header>
-  <nav>
-      <%= link_to image_tag("logo.png"), root_path %>
-      <%= link_to("Movies", movies_path) %>
-  </nav>
-</header>
+<nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+  <div class="container-fluid">
+    <%= link_to image_tag("logo.png"), root_path %>
+    <button
+      class="navbar-toggler"
+      type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample02">
+      <ul class="navbar-nav me-auto"><li class="nav-item"><%= link_to "Movies", movies_path %></li></ul>
+      <%= link_to "Sign up", signup_path, class: "btn btn-outline-light" %>
+    </div>
+  </div>
+</nav>
