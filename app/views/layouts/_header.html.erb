@@ -17,8 +17,12 @@
       <ul class="navbar-nav w-100">
         <li class="nav-item p-1"><%= link_to "Movies", movies_path, class: "nav-link" %></li>
         <li class="nav-item p-1 ms-auto"><%= link_to "Add", new_movie_path, class: "btn btn-primary" %></li>
-        <li class="nav-item p-1"><%= link_to "Sign in", new_session_path, class: "btn btn-outline-light" %></li>
-        <li class="nav-item p-1"><%= link_to "Sign up", signup_path, class: "btn btn-outline-light" %></li>
+        <% if current_user %>
+          <li class="nav-item p-1"><%= link_to current_user.name, current_user, class: "nav-link" %></li>
+        <% else %>
+          <li class="nav-item p-1"><%= link_to "Sign in", new_session_path, class: "btn btn-outline-light" %></li>
+          <li class="nav-item p-1"><%= link_to "Sign up", signup_path, class: "btn btn-outline-light" %></li>
+        <% end %>
       </ul>
     </div>
   </div>
