@@ -382,3 +382,11 @@ section.errors h3 {
   color: #2d7dbf;
   text-decoration: none;
 }
+
+div.movies {
+ padding: 15px;
+}
+
+section.movie {
+  margin: 15px;
+}
