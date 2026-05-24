@@ -22,8 +22,11 @@
       <%= average_stars(@movie) %>
       <%= link_to "Write Review", new_movie_review_path(@movie), class: "btn btn-success" %>
       <%= link_to "Reviews", movie_reviews_path(@movie), class: "btn btn-success" %>
-      <%= link_to "Edit", edit_movie_path(@movie), class: "btn btn-secondary" %>
-      <%= link_to "Delete", movie_path(@movie), class: "btn btn-outline-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure" } %>
+      
+      <% if current_user_admin? %>
+        <%= link_to "Edit", edit_movie_path(@movie), class: "btn btn-secondary" %>
+        <%= link_to "Delete", movie_path(@movie), class: "btn btn-outline-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure" } %>
+      <% end %>
     </div>
   </div>
 </section>
