@@ -5,4 +5,18 @@
         <%= link_to "Edit", edit_user_path(@user), class: "btn btn-secondary" %>
         <%= link_to "Delete", @user, class: "btn btn-outline-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure" } %>
     <% end %>
+
+    <% if @reviews.present? %>
+        <h2 class="mt-5 mb-4">Reviews</h2>
+        <div class="reviews-list">
+            <% @reviews.each do |review| %>
+            <div class="review-card">
+            <div class="review-left">
+                <div class="image"><%= image_tag review.movie.image_file_name %></div>
+                <div class="movie-info"><%= link_to review.movie.title, review.movie, class: "movie-title" %></div>
+            </div>
+            </div>
+            <% end %>
+        </div>
+    <% end %>
 </section>

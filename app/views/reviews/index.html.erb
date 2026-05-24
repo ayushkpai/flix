@@ -4,7 +4,7 @@
   <% @reviews.each do |review| %>
     <li>
       <%= pluralize(review.stars, "star") %>
-      <p><%= review.name %></p>
+      <p><%= link_to review.user.name, review.user %></p>
       <p><%= review.comment %></p>
     </li>
   <% end %>
