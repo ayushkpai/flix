@@ -1,4 +1,4 @@
-class CreateLikes < ActiveRecord::Migration[8.0]
+class CreateFavourites < ActiveRecord::Migration[8.0]
   def change
     create_table :favourites do |t|
       t.references :movie, null: false, foreign_key: true
