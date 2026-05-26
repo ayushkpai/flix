@@ -390,3 +390,31 @@ div.movies {
 section.movie {
   margin: 15px;
 }
+
+.favourites {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.favourites form {
+  margin: 0;
+}
+
+.favourite-btn {
+  border: none !important;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  padding: 10px 18px;
+  font-size: 18px;
+}
+
+.count {
+  padding: 10px 14px;
+  border-left: 1px solid #dcdcdc;
+  font-size: 18px;
+}

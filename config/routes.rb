@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :movies do
     resources :reviews
+    resources :favourites, only: [ :create, :destroy ]
   end
 
   resource :session, only: [ :new, :create, :destroy ]
