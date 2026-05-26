@@ -41,12 +41,12 @@
 
   <aside>
     <% if @fans.present? %>
-        <h4>Fans</h4>
-        <ul>
-            <% @fans.each do |user| %>
-                <li><%= link_to user.name, user %></li>
-            <% end %>
-        </ul>
+      <h4>Fans</h4>
+      <ul>
+        <% @fans.each do |user| %>
+          <li><%= link_to user.name, user %></li>
+        <% end %>
+      </ul>
     <% end %>
 
     <% if @genres.present? %>
@@ -57,5 +57,5 @@
         <% end %>
       </ul>
     <% end %>
-    </aside>
+  </aside>
 </section>
