@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :genres
   root "movies#index"
   get "up" => "rails/health#show", as: :rails_health_check
 
@@ -10,6 +9,7 @@ Rails.application.routes.draw do
 
   resource :session, only: [ :new, :create, :destroy ]
   resources :users
+  resources :genres
   get "signup" => "users#new"
   get "movies/filter/:filter" => "movies#index", as: :filtered_movies
 end
